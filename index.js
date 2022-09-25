@@ -34,4 +34,35 @@
 // }).listen(4500);
 /////////////////////////////////
  
-console.log("My Git first push");
+// console.log("My Git first");
+
+/////////////////////////////////
+// Basic API
+// const data=require("./index1");
+// const http=require("http");
+// http.createServer((req,res)=>{
+//    res.writeHead(200,{"Content-type":"application\json"});
+//    res.write(JSON.stringify({
+//     data
+//     // name:"Aijax",
+//     // address:"Hawal"
+//    }))
+//    res.end();
+// }).listen(5000)
+
+/////////////////////////////////
+// Get data from command line
+
+// console.log(process.argv[2]);
+const fs=require("fs");
+const color=require("colors")
+const input=process.argv
+if(input[2]==="add"){
+    fs.writeFileSync(input[3],input[4]);
+}
+else if(input[2]==="remove"){
+    fs.unlinkSync(input[3]);
+}
+else{
+    console.log("Invalid Data".red);
+}
