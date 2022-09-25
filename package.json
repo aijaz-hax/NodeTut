@@ -1,0 +1,19 @@
+{
+  "name": "nodelearn",
+  "version": "1.0.0",
+  "description": "This is about node learning stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aijax.js",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/aijaz-hax/NodeTut.git)"
+  }
+}
