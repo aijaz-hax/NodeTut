@@ -54,15 +54,88 @@
 // Get data from command line
 
 // console.log(process.argv[2]);
-const fs=require("fs");
-const color=require("colors")
-const input=process.argv
-if(input[2]==="add"){
-    fs.writeFileSync(input[3],input[4]);
-}
-else if(input[2]==="remove"){
-    fs.unlinkSync(input[3]);
-}
-else{
-    console.log("Invalid Data".red);
-}
+// const fs=require("fs");
+// const color=require("colors")
+// const input=process.argv
+// if(input[2]==="add"){
+//     fs.writeFileSync(input[3],input[4]);
+// }
+// else if(input[2]==="remove"){
+//     fs.unlinkSync(input[3]);
+// }
+// else{
+//     console.log("Invalid Data".red);
+// }
+
+///////////////////////////////////PATH MODULES & FILE CREATE
+
+// const fs=require("fs");
+// const path=require("path");
+// const dirPath=path.join(__dirname,"files");
+// // console.log(dirName);
+// // for(i=0;i<5;i++){
+// //     fs.writeFileSync(`${dirPath}/ajaz${i}.txt`,`I am file number ${i}`);
+// // }
+// fs.readdir(dirPath,(err,files)=>{
+//    console.warn(files);
+// })
+
+///////////////////////////////////CRUD with File System
+
+// const fs=require("fs");
+// const path=require("path");
+// const dirPath=path.join(__dirname,"crud");
+// const myPath=`${dirPath}/ajaz.txt`
+// fs.writeFileSync(myPath,`This is a simple plain text`);
+// fs.readFile(myPath,"utf-8",(err,item)=>{
+//    console.log(item);
+// })
+// fs.appendFile(myPath,"I've to work hard",(error)=>{
+//    if(!error){
+//     console.log("File append successfully");
+//    }
+// })
+// fs.rename(myPath,`${dirPath}/aijax.txt`,(err)=>{
+//      if(!err){
+//         console.log("Rename successful");
+//      }
+// })
+//////////////////////
+// const http =require("http");
+// const url= require("url")
+// const server=http.createServer((req,res)=>{
+//     const pathName=req.url;
+//     if(pathName==="/aijax"){
+//         res.end("Hello from aijax bhai");    
+//     }
+//     else{
+//     // res.writeHead("404");
+//     res.writeHead(404,{
+//         'Content-type':'text/html'
+//     })
+//     res.end("<h2>Hello from server</h2>");
+//     }
+// })
+// server.listen(8000,"127.0.0.1",()=>{
+//     console.log("Listening..........");
+// })
+//////////////////////////////// Parsing variable in URL
+
+// const http =require("http");
+// const url= require("url");
+ 
+// const server=http.createServer((req,res)=>{
+//     const path=req.url;
+//     const newData=url.parse(path,true);
+//     console.log(newData);
+//     res.end("Data");
+// })
+// server.listen(8000,"127.0.0.1",()=>{
+//     console.log("Listening....")
+// })
+
+//////////////////////////////// Slugify
+
+const slugify=require("slugify");
+console.log(slugify("Aijax Bhat",{lower:true}))
+
