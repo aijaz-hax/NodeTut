@@ -136,6 +136,36 @@
 
 //////////////////////////////// Slugify
 
-const slugify=require("slugify");
-console.log(slugify("Aijax Bhat",{lower:true}))
+// const slugify=require("slugify");
+// console.log(slugify("Aijax Bhat",{lower:true}))
 
+////////////////////////////// 
+// EXPRESSSSS BASIC
+
+
+const express= require("express");
+const app=express();
+
+app.get("",(ijazat,jawaab)=>{
+   jawaab.send("Aijax Express Test")
+})
+app.get("/htm",(ijazat,jawaab)=>{
+   jawaab.send("<h2>Aijax Express Test<h2>")
+})
+app.get("/jayson",(ijazat,jawaab)=>{
+   jawaab.send([{
+    name:ijazat.query.name,
+    email:"aijaz.ahamed@reachiq.io"
+   },
+   {
+    name:"Muncha",
+    email:"muncha@reachiq.io"
+   }
+])
+})
+app.get("/aijax",(ijazat,jawaab)=>{
+   console.log(`Yei laya maine browser se `,ijazat.query.name);
+   jawaab.send("Aijax Page " + ijazat.query.name)
+})
+
+app.listen(5000);
